@@ -1,0 +1,55 @@
+<ActionBar class="action-bar">
+  <NavigationButton visibility="hidden"></NavigationButton>
+  <GridLayout columns="50, *">
+    <Label class="action-bar-title" text="Login" colSpan="2"></Label>
+
+    <Label class="fas" text="&#xf0c9;" (tap)="onDrawerButtonTap()"></Label>
+  </GridLayout>
+</ActionBar>
+
+<GridLayout class="page__content">
+  <Frame>
+    <Page loaded="onLoaded" actionBarHidden="true">
+      <FlexboxLayout class="page">
+        <StackLayout class="form">>
+            <TextField class="input" hint="Email" [(ngModel)]="email" keyboardType="email" autocorrect="false"
+              autocapitalizationType="none"></TextField>
+              <StackLayout *ngIf="isLoggingIn" class="input-field">
+            <TextField class="input" hint="Password" [(ngModel)]="password" autocorrect="false"
+              autocapitalizationType="none" secure="true"></TextField>
+          </StackLayout>
+          <StackLayout *ngIf="!isLoggingIn" class="input-field">
+            <TextField class="input" hint="first name" [(ngModel)]="firstName" autocorrect="false"
+              autocapitalizationType="none"></TextField>
+            <TextField class="input" hint="last name" [(ngModel)]="lastName" autocorrect="false"
+              autocapitalizationType="none"></TextField>
+  
+            <DatePickerField hint="born" minDate="1920-01-08" (dateChange)="onDateChange($event)"  pickerDefaultDate="2019/05/15">
+              
+              ></DatePickerField>
+  
+              <!--<GridLayout rows="auto, auto, *" columns="auto, *">-->
+                <DropDown #dd backroundColor="red" class="drop" itemsTextAlignment="center" [items]="items" [(ngModel)]="selectedIndex"
+                  (selectedIndexChanged)="onchange($event)" (opened)="onopen()" (closed)="onclose()" row="0" colSpan="2">
+                </DropDown>
+               <!-- <TextField [text]="selectedIndex" row="1" col="1"></TextField>-->
+             <!-- </GridLayout>-->
+            <TextField class="input" hint="Password" [(ngModel)]="password" autocorrect="false"
+              autocapitalizationType="none" secure="true"></TextField>
+            <TextField class="input" hint="Confirm Password" [(ngModel)]="confirmPassword" autocorrect="false"
+              autocapitalizationType="none" secure="true"></TextField>
+          </StackLayout>
+          <Button class="button" role="button" [text]="isLoggingIn ? 'Log In' : 'Sign Up'" (tap)="onLogin()"></Button>
+          <Label class="spanText" *ngIf="isLoggingIn" text="Forgot your password?" (tap)="forgotPassword()"></Label>
+        </StackLayout>
+  
+        <Label (tap)="toggleForm()">
+          <FormattedString class="spanText-field">
+            <Span class="spanText" [text]="isLoggingIn ? 'Don’t have an account? ' : 'Back to Login'"></Span>
+            <Span [text]="isLoggingIn ? 'Sign up' : ''" class="bold"></Span>
+          </FormattedString>
+        </Label>
+      </FlexboxLayout>
+    </Page>
+  </Frame>
+</GridLayout>

@@ -3,10 +3,10 @@ import { RadSideDrawer } from 'nativescript-ui-sidedrawer'
 import { Application } from '@nativescript/core'
 import { FirebaseAuth } from '@nativescript/firebase-auth';
 @Component({
-  selector: 'Browse',
-  templateUrl: './browse.component.html',
+  selector: 'Shopping',
+  templateUrl: './shopping.component.html',
 })
-export class BrowseComponent implements OnInit {
+export class ShoppingComponent implements OnInit {
   constructor() {
     // Use the component constructor to inject providers.
   }

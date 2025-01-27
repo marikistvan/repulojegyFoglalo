@@ -1,9 +1,14 @@
 <RadSideDrawer [drawerTransition]="sideDrawerTransition">
   <GridLayout tkDrawerContent rows="auto, *" class="nt-drawer__content">
     <StackLayout row="0" class="nt-drawer__header">
-      <Image class="nt-drawer__header-image fas t-36" src="font://&#xf2bd;"></Image>
-      <Label class="nt-drawer__header-brand" text="User Name"></Label>
-      <Label class="nt-drawer__header-footnote" text="username@mail.com"></Label>
+      <ng-container *ngIf="!user">
+        <Label text="Bejelentkezés" (tap)="onNavItemTap('/login')"></Label>
+      </ng-container>
+      <ng-container *ngIf="user">
+        <Image class="nt-drawer__header-image fas t-36" src="font://&#xf2bd;"></Image>
+        <Label class="nt-drawer__header-brand" [text]="fullName"></Label>
+        <Label class="nt-drawer__header-footnote" [text]="user?.email || ' '"></Label>
+      </ng-container>
     </StackLayout>
 
     <ScrollView row="1" class="nt-drawer__body">
@@ -47,6 +52,46 @@
           <Label col="0" text="&#xf005;" class="nt-icon fas"></Label>
           <Label col="1" text="Featured" class="p-r-10"></Label>
         </GridLayout>
+
+        <GridLayout
+        columns="auto, *"
+        class="nt-drawer__list-item"
+        [class.-selected]="isComponentSelected('/profile')"
+        (tap)="onNavItemTap('/profile')"
+      >
+        <Label col="0" text="&#xf005;" class="nt-icon fas"></Label>
+        <Label col="1" text="Profile" class="p-r-10"></Label>
+      </GridLayout>
+
+      <GridLayout
+      columns="auto, *"
+      class="nt-drawer__list-item"
+      [class.-selected]="isComponentSelected('/aichat')"
+      (tap)="onNavItemTap('/aichat')"
+    >
+      <Label col="0" text="&#xf005;" class="nt-icon fas"></Label>
+      <Label col="1" text="Ai chat" class="p-r-10"></Label>
+    </GridLayout>
+
+    <GridLayout
+    columns="auto, *"
+    class="nt-drawer__list-item"
+    [class.-selected]="isComponentSelected('/basket')"
+    (tap)="onNavItemTap('/basket')"
+  >
+    <Label col="0" text="&#xf005;" class="nt-icon fas"></Label>
+    <Label col="1" text="Basket" class="p-r-10"></Label>
+  </GridLayout>
+
+  <GridLayout
+  columns="auto, *"
+  class="nt-drawer__list-item"
+  [class.-selected]="isComponentSelected('/shopping')"
+  (tap)="onNavItemTap('/shopping')"
+>
+  <Label col="0" text="&#xf005;" class="nt-icon fas"></Label>
+  <Label col="1" text="Shopping" class="p-r-10"></Label>
+</GridLayout>
 
         <StackLayout class="hr"></StackLayout>
 

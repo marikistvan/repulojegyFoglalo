@@ -1,0 +1,494 @@
+{
+    "meta": {
+      "count": 40,
+      "links": {
+        "self": "https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=BUD&destinationLocationCode=MXP&departureDate=2025-01-18&adults=1&nonStop=false&max=250"
+      }
+    },
+    "data": [
+      {
+        "type": "flight-offer",
+        "id": "1",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "isUpsellOffer": false,
+        "lastTicketingDate": "2025-01-18",
+        "lastTicketingDateTime": "2025-01-18",
+        "numberOfBookableSeats": 4,
+        "itineraries": [
+          {
+            "duration": "PT19H15M",
+            "segments": [
+              {
+                "departure": {
+                  "iataCode": "BUD",
+                  "terminal": "2A",
+                  "at": "2025-01-18T14:55:00"
+                },
+                "arrival": {
+                  "iataCode": "ATH",
+                  "at": "2025-01-18T17:55:00"
+                },
+                "carrierCode": "A3",
+                "number": "877",
+                "aircraft": {
+                  "code": "320"
+                },
+                "operating": {
+                  "carrierCode": "A3"
+                },
+                "duration": "PT2H",
+                "id": "27",
+                "numberOfStops": 0,
+                "blacklistedInEU": false
+              },
+              {
+                "departure": {
+                  "iataCode": "ATH",
+                  "at": "2025-01-19T08:35:00"
+                },
+                "arrival": {
+                  "iataCode": "MXP",
+                  "terminal": "1",
+                  "at": "2025-01-19T10:10:00"
+                },
+                "carrierCode": "A3",
+                "number": "660",
+                "aircraft": {
+                  "code": "32N"
+                },
+                "operating": {
+                  "carrierCode": "A3"
+                },
+                "duration": "PT2H35M",
+                "id": "28",
+                "numberOfStops": 0,
+                "blacklistedInEU": false
+              }
+            ]
+          }
+        ],
+        "price": {
+          "currency": "EUR",
+          "total": "105.68",
+          "base": "27.00",
+          "fees": [
+            {
+              "amount": "0.00",
+              "type": "SUPPLIER"
+            },
+            {
+              "amount": "0.00",
+              "type": "TICKETING"
+            }
+          ],
+          "grandTotal": "105.68",
+          "additionalServices": [
+            {
+              "amount": "32.00",
+              "type": "CHECKED_BAGS"
+            }
+          ]
+        },
+        "pricingOptions": {
+          "fareType": [
+            "PUBLISHED"
+          ],
+          "includedCheckedBagsOnly": false
+        },
+        "validatingAirlineCodes": [
+          "A3"
+        ],
+        "travelerPricings": [
+          {
+            "travelerId": "1",
+            "fareOption": "STANDARD",
+            "travelerType": "ADULT",
+            "price": {
+              "currency": "EUR",
+              "total": "105.68",
+              "base": "27.00"
+            },
+            "fareDetailsBySegment": [
+              {
+                "segmentId": "27",
+                "cabin": "ECONOMY",
+                "fareBasis": "PNFLXSC",
+                "brandedFare": "FLEX",
+                "brandedFareLabel": "FLEX",
+                "class": "P",
+                "includedCheckedBags": {
+                  "quantity": 0
+                },
+                "amenities": [
+                  {
+                    "description": "EXCESS BAGGAGE",
+                    "isChargeable": true,
+                    "amenityType": "BAGGAGE",
+                    "amenityProvider": {
+                      "name": "BrandedFare"
+                    }
+                  },
+                  {
+                    "description": "EXTRA BAGGAGE",
+                    "isChargeable": true,
+                    "amenityType": "BAGGAGE",
+                    "amenityProvider": {
+                      "name": "BrandedFare"
+                    }
+                  },
+                  {
+                    "description": "CHARGEABLE SEAT",
+                    "isChargeable": true,
+                    "amenityType": "PRE_RESERVED_SEAT",
+                    "amenityProvider": {
+                      "name": "BrandedFare"
+                    }
+                  },
+                  {
+                    "description": "SNACK",
+                    "isChargeable": false,
+                    "amenityType": "MEAL",
+                    "amenityProvider": {
+                      "name": "BrandedFare"
+                    }
+                  },
+                  {
+                    "description": "FAST TRACK",
+                    "isChargeable": true,
+                    "amenityType": "TRAVEL_SERVICES",
+                    "amenityProvider": {
+                      "name": "BrandedFare"
+                    }
+                  },
+                  {
+                    "description": "REFUNDABLE TICKET",
+                    "isChargeable": true,
+                    "amenityType": "BRANDED_FARES",
+                    "amenityProvider": {
+                      "name": "BrandedFare"
+                    }
+                  },
+                  {
+                    "description": "MILEAGE ACCRUAL",
+                    "isChargeable": false,
+                    "amenityType": "BRANDED_FARES",
+                    "amenityProvider": {
+                      "name": "BrandedFare"
+                    }
+                  }
+                ]
+              },
+              {
+                "segmentId": "28",
+                "cabin": "ECONOMY",
+                "fareBasis": "PNFLXSC",
+                "brandedFare": "FLEX",
+                "brandedFareLabel": "FLEX",
+                "class": "P",
+                "includedCheckedBags": {
+                  "quantity": 0
+                },
+                "amenities": [
+                  {
+                    "description": "EXCESS BAGGAGE",
+                    "isChargeable": true,
+                    "amenityType": "BAGGAGE",
+                    "amenityProvider": {
+                      "name": "BrandedFare"
+                    }
+                  },
+                  {
+                    "description": "EXTRA BAGGAGE",
+                    "isChargeable": true,
+                    "amenityType": "BAGGAGE",
+                    "amenityProvider": {
+                      "name": "BrandedFare"
+                    }
+                  },
+                  {
+                    "description": "CHARGEABLE SEAT",
+                    "isChargeable": true,
+                    "amenityType": "PRE_RESERVED_SEAT",
+                    "amenityProvider": {
+                      "name": "BrandedFare"
+                    }
+                  },
+                  {
+                    "description": "SNACK",
+                    "isChargeable": false,
+                    "amenityType": "MEAL",
+                    "amenityProvider": {
+                      "name": "BrandedFare"
+                    }
+                  },
+                  {
+                    "description": "FAST TRACK",
+                    "isChargeable": true,
+                    "amenityType": "TRAVEL_SERVICES",
+                    "amenityProvider": {
+                      "name": "BrandedFare"
+                    }
+                  },
+                  {
+                    "description": "REFUNDABLE TICKET",
+                    "isChargeable": true,
+                    "amenityType": "BRANDED_FARES",
+                    "amenityProvider": {
+                      "name": "BrandedFare"
+                    }
+                  },
+                  {
+                    "description": "MILEAGE ACCRUAL",
+                    "isChargeable": false,
+                    "amenityType": "BRANDED_FARES",
+                    "amenityProvider": {
+                      "name": "BrandedFare"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "flight-offer",
+        "id": "40",
+        "source": "GDS",
+        "instantTicketingRequired": false,
+        "nonHomogeneous": false,
+        "oneWay": false,
+        "isUpsellOffer": false,
+        "lastTicketingDate": "2025-01-18",
+        "lastTicketingDateTime": "2025-01-18",
+        "numberOfBookableSeats": 9,
+        "itineraries": [
+          {
+            "duration": "PT24H30M",
+            "segments": [
+              {
+                "departure": {
+                  "iataCode": "BUD",
+                  "terminal": "0",
+                  "at": "2025-01-18T18:00:00"
+                },
+                "arrival": {
+                  "iataCode": "XIY",
+                  "terminal": "3",
+                  "at": "2025-01-19T10:00:00"
+                },
+                "carrierCode": "FM",
+                "number": "892",
+                "aircraft": {
+                  "code": "789"
+                },
+                "operating": {
+                  "carrierCode": "FM"
+                },
+                "duration": "PT9H",
+                "id": "39",
+                "numberOfStops": 0,
+                "blacklistedInEU": false
+              },
+              {
+                "departure": {
+                  "iataCode": "XIY",
+                  "terminal": "3",
+                  "at": "2025-01-19T14:30:00"
+                },
+                "arrival": {
+                  "iataCode": "MXP",
+                  "terminal": "1",
+                  "at": "2025-01-19T18:30:00"
+                },
+                "carrierCode": "MU",
+                "number": "5013",
+                "aircraft": {
+                  "code": "332"
+                },
+                "operating": {
+                  "carrierCode": "MU"
+                },
+                "duration": "PT11H",
+                "id": "40",
+                "numberOfStops": 0,
+                "blacklistedInEU": false
+              }
+            ]
+          }
+        ],
+        "price": {
+          "currency": "EUR",
+          "total": "3471.85",
+          "base": "2986.00",
+          "fees": [
+            {
+              "amount": "0.00",
+              "type": "SUPPLIER"
+            },
+            {
+              "amount": "0.00",
+              "type": "TICKETING"
+            }
+          ],
+          "grandTotal": "3471.85"
+        },
+        "pricingOptions": {
+          "fareType": [
+            "PUBLISHED"
+          ],
+          "includedCheckedBagsOnly": true
+        },
+        "validatingAirlineCodes": [
+          "MU"
+        ],
+        "travelerPricings": [
+          {
+            "travelerId": "1",
+            "fareOption": "STANDARD",
+            "travelerType": "ADULT",
+            "price": {
+              "currency": "EUR",
+              "total": "3471.85",
+              "base": "2986.00"
+            },
+            "fareDetailsBySegment": [
+              {
+                "segmentId": "39",
+                "cabin": "ECONOMY",
+                "fareBasis": "Z2S0BHSD",
+                "class": "Z",
+                "includedCheckedBags": {
+                  "quantity": 2
+                }
+              },
+              {
+                "segmentId": "40",
+                "cabin": "ECONOMY",
+                "fareBasis": "Y1S0BENA",
+                "class": "Y",
+                "includedCheckedBags": {
+                  "quantity": 2
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "dictionaries": {
+      "locations": {
+        "MXP": {
+          "cityCode": "MIL",
+          "countryCode": "IT"
+        },
+        "AMS": {
+          "cityCode": "AMS",
+          "countryCode": "NL"
+        },
+        "XIY": {
+          "cityCode": "SIA",
+          "countryCode": "CN"
+        },
+        "CAI": {
+          "cityCode": "CAI",
+          "countryCode": "EG"
+        },
+        "WAW": {
+          "cityCode": "WAW",
+          "countryCode": "PL"
+        },
+        "HEL": {
+          "cityCode": "HEL",
+          "countryCode": "FI"
+        },
+        "DXB": {
+          "cityCode": "DXB",
+          "countryCode": "AE"
+        },
+        "BUD": {
+          "cityCode": "BUD",
+          "countryCode": "HU"
+        },
+        "MAD": {
+          "cityCode": "MAD",
+          "countryCode": "ES"
+        },
+        "ZRH": {
+          "cityCode": "ZRH",
+          "countryCode": "CH"
+        },
+        "VIE": {
+          "cityCode": "VIE",
+          "countryCode": "AT"
+        },
+        "FRA": {
+          "cityCode": "FRA",
+          "countryCode": "DE"
+        },
+        "ATH": {
+          "cityCode": "ATH",
+          "countryCode": "GR"
+        },
+        "MUC": {
+          "cityCode": "MUC",
+          "countryCode": "DE"
+        },
+        "DOH": {
+          "cityCode": "DOH",
+          "countryCode": "QA"
+        }
+      },
+      "aircraft": {
+        "223": "AIRBUS  A220-300",
+        "290": "EMBRAER 190 E2",
+        "295": "EMBRAER 195 E2",
+        "319": "AIRBUS A319",
+        "320": "AIRBUS A320",
+        "321": "AIRBUS A321",
+        "332": "AIRBUS A330-200",
+        "346": "AIRBUS A340-600",
+        "359": "AIRBUS A350-900",
+        "388": "AIRBUS A380-800",
+        "738": "BOEING 737-800",
+        "789": "BOEING 787-9",
+        "E95": "EMBRAER 195",
+        "E75": "EMBRAER 175",
+        "32A": "AIRBUS A320 (SHARKLETS)",
+        "7M8": "BOEING 737 MAX 8",
+        "32B": "AIRBUS A321 (SHARKLETS)",
+        "AT7": "ATR 72",
+        "73J": "BOEING 737-900",
+        "32N": "AIRBUS A320NEO",
+        "32Q": "AIRBUS A321NEO",
+        "77W": "BOEING 777-300ER",
+        "E90": "EMBRAER 190"
+      },
+      "currencies": {
+        "EUR": "EURO"
+      },
+      "carriers": {
+        "KL": "KLM ROYAL DUTCH AIRLINES",
+        "QR": "QATAR AIRWAYS",
+        "LO": "LOT POLISH AIRLINES",
+        "OS": "AUSTRIAN AIRLINES",
+        "MS": "EGYPTAIR",
+        "EK": "EMIRATES",
+        "FM": "SHANGHAI AIRLINES",
+        "MU": "CHINA EASTERN AIRLINES",
+        "CL": "LUFTHANSA CITYLINE",
+        "EN": "AIR DOLOMITI",
+        "LX": "SWISS INTERNATIONAL AIR LINES",
+        "A3": "AEGEAN AIRLINES",
+        "TF": "BRAATHENS REGIONAL AIRWAYS AB",
+        "FZ": "FLYDUBAI",
+        "AY": "FINNAIR",
+        "IB": "IBERIA",
+        "2L": "HELVETIC AIRWAYS",
+        "LH": "LUFTHANSA"
+      }
+    }
+  }

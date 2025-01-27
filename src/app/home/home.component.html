@@ -4,10 +4,28 @@
     <Label class="action-bar-title" text="Home" colSpan="2"></Label>
 
     <Label class="fas" text="&#xf0c9;" (tap)="onDrawerButtonTap()"></Label>
+
   </GridLayout>
 </ActionBar>
 
 <GridLayout class="page__content">
-  <Label class="page__content-icon fas" text="&#xf015;"></Label>
-  <Label class="page__content-placeholder" text="<!-- Page content goes here -->"></Label>
+  <Frame>
+    <Page loaded="onLoaded" actionBarHidden="true">
+      <FlexboxLayout class="page">
+        <StackLayout class="form">
+          <TextField class="input" hint="honnan" [(ngModel)]="honnan" autocorrect="true" autocapitalizationType="none"></TextField>
+          <TextField class="input" hint="hova" [(ngModel)]="hova" autocorrect="true" autocapitalizationType="none"></TextField>
+          <DatePickerField hint="mikor" 
+                   minDate="2025-01-17" 
+                   pickerDefaultDate="2025-01-17" 
+                   (dateChange)="onDateChange($event)">
+        </DatePickerField>
+          <button text="Ne nyomd meg" (tap)="Submit()"></button>
+
+  
+          <Label [text]="valami" ></Label>
+        </StackLayout>
+      </FlexboxLayout>
+    </Page>
+  </Frame>
 </GridLayout>

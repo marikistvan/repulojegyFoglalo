@@ -24,6 +24,27 @@ const routes: Routes = [
     path: 'settings',
     loadChildren: () => import('~/app/settings/settings.module').then((m) => m.SettingsModule),
   },
+  {
+    path: 'aichat',
+    loadChildren: () => import('~/app/aichat/aichat.module').then((m) => m.AiChatModule),
+  },
+  {
+    path: 'basket',
+    loadChildren: () => import('~/app/basket/basket.module').then((m) => m.BasketModule),
+  },
+  {
+    path: 'shopping',
+    loadChildren: () => import('~/app/shopping/shopping.module').then((m) => m.ShoppingModule),
+  },
+  {
+    path: 'profile',
+    loadChildren: () => import('~/app/profile/profile.module').then((m) => m.ProfileModule),
+  },
+  {
+    path: 'login',
+    loadChildren: () =>
+    import('~/app/login/login.module').then(m => m.LoginModule)
+  },
 ]
 
 @NgModule({
